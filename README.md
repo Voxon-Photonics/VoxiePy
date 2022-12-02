@@ -2,12 +2,18 @@
 
 Coming Soon
 
-A Voxon Python Wrapper 
+A Voxon Python Wrapper
 
 Develop applications for the Voxon Volumetric display using Python
 
 Matthew Vecchio - Lead Developer
 Ben Weatherall - Initial POC development 
+
+## Requirements
+
+Python 3.X 64-bit
+voxiebox.dll
+
 
 ## License
 
