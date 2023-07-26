@@ -1,69 +1,10 @@
-# VoxiePy
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Oct 28 15:30:05 2020
 
-A Voxon Python Wrapper
+@author: Mat Vex
+"""
 
-Develop applications for the Voxon Volumetric display using Python
-
-If you don’t know what a Voxon’s Volumetric display is have a look at the VX1 at www.voxon.co
-
-VoxiePy uses the same function calls as standard VX development (see voxiebox.txt in the Voxon Developers Kit for a list of function calls / descriptions)
-located at *Developers Kit \ App Development \ C Voxon SDK Development \ ocumentation \ voxiebox.txt*
-VoxiePyWritten by: 
-
-Matthew Vecchio - Lead Developer
-Ben Weatherall - Initial POC development 
-
-Contributions are welcome. 
-
-## Requirements
-
-* Python 3.X 64-bit
-* Voxon Developers Kit (obtainable from www.voxon.co) or Voxon Hardware
-* Windows 10 or later since The Voxon Developers Kit only works on Windows 
-
-
-## File list
-
-| *File / Module* | *Description*|
-|-----------------------|:-----------:|
-| VoxiePy.py      | Main wrapper / bridge for Python -> Voxon App. Creates a VoxiePy class which manages a VX instance |
-| VxPyDataTypes.py | Lists all the Voxon related Datatypes as classes |
-| VxPyTools.py     | Helper functions for Voxon App Development |
-| VxScanCodes.py | Keyboard and input binding scancodes |
-
-
-## How To Install
-
-
-### Method 1: Install using PIP
-
-
-### Method 2: Copy Files to your Python's Lib folder
-
-If you aren't running any package managers with your python install you can run the 'installtolib.bat' file which will copy the VoxiePy files into your Python Lib folder. 
-
-Otherwise place the VoxiePy.py and the three Vx... files into.
-
-%LocalAppData%\Programs\Python\ < Your Python Version > \ Lib
-
-
-### Method 3: Copy Files locally
-
-
-Copy the VoxiePy.py and the three Vx modules (VxPyDataTypes.py, VxPyTools.py and VxScanCodes.py) into the same folder as your Python scripts.
-
-
-## How Use Example Code
-
-
-Under the Example folder you'll find various testing scripts. 
-
-
-
-## Simple Hello World App
-
-
-```
 ## Python 'Hello World' example running VoxieBox.DLL
 
 from VxPyDataTypes import  *
@@ -74,11 +15,14 @@ import VxPyTools as vxt ## various helper functions for VxPy development
 import time
 
 
+
+
 ## position of text
 pos = point3d(-.9,-.7,0)
 rvec = point3d(.1,0,0) ## the right vector sets the font width 
 dvec = point3d(0,.1,0) ## the down vector sets the font height
 fvec = point3d(0,0,.1)
+
 
 class VXApp(VoxiePy):
    
@@ -89,8 +33,11 @@ class VXApp(VoxiePy):
         vx = VoxiePy ## shorter name for the VX runtime
         
         try:
-                       
+          
+                   
             while (vx.Breath() == 0):
+    
+               
     
                     ## start frame - all draw calls after this line
                     vx.StartFrame()
@@ -145,24 +92,3 @@ except Exception as e:
         time.sleep(5)    
 
 
-```
-
-
-## License
-
-VoxiePy is under a Creative Commons Attribution 4.0 International License.
-You are free to:  
-
-Share — copy and redistribute the material in any medium or format
-
-Adapt — remix, transform, and build upon the material
-for any purpose, even commercially.
-
-Under the following terms:
-Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
-
-No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
-
-Notices:
-You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation.
-No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material.
