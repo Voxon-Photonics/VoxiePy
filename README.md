@@ -37,14 +37,16 @@ Contributions are welcome.
 
 ### Method 1: Install using PIP
 
+... comming soon ...
+
 
 ### Method 2: Copy Files to your Python's Lib folder
 
 If you aren't running any package managers with your python install you can run the 'installtolib.bat' file which will copy the VoxiePy files into your Python Lib folder. 
 
-Otherwise place the VoxiePy.py and the three Vx... files into.
+Otherwise place the VoxiePy.py and the three Vx modules (VxPyDataTypes.py, VxPyTools.py and VxScanCodes.py) files into...
 
-%LocalAppData%\Programs\Python\ < Your Python Version > \ Lib
+*%LocalAppData%\Programs\Python\ < Your Python Version > \ Lib*
 
 
 ### Method 3: Copy Files locally
